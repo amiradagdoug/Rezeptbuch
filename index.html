@@ -1,123 +1,81 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rezepte</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@300&display=swap" rel="stylesheet">
+    <title>Find Meal For Your Ingredients</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container-accueil">
-        <h1>die beste Zept </h1>
+    <div class="container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+                <h2 class="title">Find Meals For Your Ingredients</h2>
+                <blockquote>Real food doesn't have ingredients, real food is ingredients.<br>
+                    <cite>- Jamie Oliver</cite>
+                </blockquote>
 
-        <div class="container-search">
-            <input id="search-input" type="text" placeholder="Rechercher">
-            <div class="search">
-                <img src="ressources/logo-search.svg">
+                <div class="meal-search-box">
+                    <input type="text" class="search-control" placeholder="Enter an ingredient" id="search-input">
+                    <button type="submit" class="search-btn btn" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="meal-result">
+                <h2 class="title">Your Search Results:</h2>
+                <div id="meal">
+                    <!-- meal item -->
+                    <!-- <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "food.jpg" alt = "food">
+            </div>
+            <div class = "meal-name">
+              <h3>Potato Chips</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+          </div> -->
+                    <!-- end of meal item -->
+                </div>
+            </div>
+
+
+            <div class="meal-details">
+                <!-- recipe close btn -->
+                <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <!-- meal content -->
+                <div class="meal-details-content">
+                    <!-- <h2 class = "recipe-title">Meals Name Here</h2>
+          <p class = "recipe-category">Category Name</p>
+          <div class = "recipe-instruct">
+            <h3>Instructions:</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
+          </div>
+          <div class = "recipe-meal-img">
+            <img src = "food.jpg" alt = "">
+          </div>
+          <div class = "recipe-link">
+            <a href = "#" target = "_blank">Watch Video</a>
+          </div> -->
+                </div>
             </div>
         </div>
-
-        <div class="container-recettes">
-            <div class="block-recette">
-                <div class="devant">
-                    <img src="ressources/butter-chicken.jpg" alt="Butter Chicken">
-                </div>
-                <div class="overlay">
-                    <h4>Butter Chicken</h4>
-                    <button class="btn-instruction" type="button"><a
-                            href="rezepte/butterChicken.html">Instructions</a></button>
-                </div>
-            </div>
-
-            <div class="block-recette">
-                <div class="devant">
-                    <img src="ressources/chili.jpg" alt="Chili Con Carne">
-                </div>
-                <div class="overlay">
-                    <h4>Chili Con Carne</h4>
-                    <button class="btn-instruction" type="button"><a
-                            href="rezepte/chiliConCarne.html">Instructions</a></button>
-                </div>
-            </div>
-
-            <div class="block-recette">
-                <div class="devant">
-                    <img src="ressources/houmous.jpg" alt="Houmous">
-                </div>
-                <div class="overlay">
-                    <h4>Houmous</h4>
-                    <button class="btn-instruction" type="button"><a
-                            href="rezepte/houmous.html">Instructions</a></button>
-                </div>
-            </div>
-
-            <div class="block-recette">
-                <div class="devant">
-                    <img src="ressources/tzatziki.webp" alt="Tzatziki">
-                </div>
-                <div class="overlay">
-                    <h4>Tzatziki</h4>
-                    <button class="btn-instruction" type="button"><a
-                            href="rezepte/tzatziki.html">Instructions</a></button>
-                </div>
-            </div>
-
-            <div class="block-recette">
-                <div class="devant">
-                    <img src="ressources/caviar-aubergine.jpg" alt="Caviar d'aubergine">
-                </div>
-                <div class="overlay">
-                    <h4>Caviar d'aubergine</h4>
-                    <button class="btn-instruction" type="button"><a
-                            href="rezepte/caviarAubergine.html">Instructions</a></button>
-                </div>
-            </div>
-
-            <div class="block-recette">
-                <div class="devant">
-                    <img src="ressources/PDT-libanaise.jpg" alt="Pomme de terre libanaise">
-                </div>
-                <div class="overlay">
-                    <h4>Batata harra</h4>
-                    <button class="btn-instruction" type="button"><a
-                            href="rezepte/pdtLibanaise.html">Instructions</a></button>
-                </div>
-            </div>
-
-            <div class="block-recette">
-                <div class="devant">
-                    <img src="ressources/taboulelibanais.jpg" alt="taboulais libanais">
-                </div>
-                <div class="overlay">
-                    <h4>Taboulé libanais</h4>
-                    <button class="btn-instruction" type="button"><a
-                            href="rezepte/tabouleLibanais.html">Instructions</a></button>
-                </div>
-            </div>
-
-            <div class="block-recette">
-                <div class="devant">
-                    <img src="ressources/hamburger.webp" alt="hamburger">
-                </div>
-                <div class="overlay">
-                    <h4>Hamburger</h4>
-                    <button class="btn-instruction" type="button"><a
-                            href="rezepte/hamburger.html">Instructions</a></button>
-                </div>
-            </div>
-
-        </div>
-
     </div>
 
-    <script src="main.js"></script>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
