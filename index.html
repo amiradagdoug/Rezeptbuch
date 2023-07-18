@@ -2,80 +2,330 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Meal For Your Ingredients</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
+  <title>Mini Projekt Amira</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-
+  <nav class="navbar navbar-inverse">
     <div class="container">
-        <div class="meal-wrapper">
-            <div class="meal-search">
-                <h2 class="title">Find Meals For Your Ingredients</h2>
-                <blockquote>Real food doesn't have ingredients, real food is ingredients.<br>
-                    <cite>- Jamie Oliver</cite>
-                </blockquote>
-
-                <div class="meal-search-box">
-                    <input type="text" class="search-control" placeholder="Enter an ingredient" id="search-input">
-                    <button type="submit" class="search-btn btn" id="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="meal-result">
-                <h2 class="title">Your Search Results:</h2>
-                <div id="meal">
-                    <!-- meal item -->
-                    <!-- <div class = "meal-item">
-            <div class = "meal-img">
-              <img src = "food.jpg" alt = "food">
-            </div>
-            <div class = "meal-name">
-              <h3>Potato Chips</h3>
-              <a href = "#" class = "recipe-btn">Get Recipe</a>
-            </div>
-          </div> -->
-                    <!-- end of meal item -->
-                </div>
-            </div>
-
-
-            <div class="meal-details">
-                <!-- recipe close btn -->
-                <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
-                    <i class="fas fa-times"></i>
-                </button>
-
-                <!-- meal content -->
-                <div class="meal-details-content">
-                    <!-- <h2 class = "recipe-title">Meals Name Here</h2>
-          <p class = "recipe-category">Category Name</p>
-          <div class = "recipe-instruct">
-            <h3>Instructions:</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
-          </div>
-          <div class = "recipe-meal-img">
-            <img src = "food.jpg" alt = "">
-          </div>
-          <div class = "recipe-link">
-            <a href = "#" target = "_blank">Watch Video</a>
-          </div> -->
-                </div>
-            </div>
-        </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Speiseplan</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <div class="headerImage">
+    <img src="./images/img1.jpeg" />
+  </div>
+
+  <div class="container mt-5 mb-4">
+    <h1></h1>
+    <br />
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="mb-3"></h3>
+        <p>
+          Die tunesische Küche ist eine abwechslungsreiche Mischung aus Aromen, die für die Vergangenheit des Landes und
+          die zentrale Lage in Nordafrika repräsentativ ist.
+
+          Während die Küche regional unterschiedlich ist, kombiniert das tunesische Essen in der Regel französische und
+          afrikanische Aromen mit einem würzigen Kick. Tunesische Gerichte mit Couscous werden je nach Verfügbarkeit vor
+          Ort häufig mit frischen Meeresfrüchten oder herzhaftem Lammfleisch zubereitet.
+
+          Tunesien ist der Ort der Kulturen und bietet nicht nur lokales Essen. Feinschmecker können in den größeren
+          Städten des Landes alle Arten internationaler Küche genießen.
+          Kurz gesagt, Tunesien ist ein Paradies für Feinschmecker. Hier sind einige beliebte tunesische Speisen, die
+          Sie probieren müssen:
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="./images/OIP (1).jpg" class="img-responsive" style="width: 100%" alt="Image" />
+      </div>
+    </div>
+    <hr class="mt-5" />
+  </div>
+
+  <div class="container mt-4 mb-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="speiseplanFilter">
+          <span class="active" data-categ="*">All</span>
+          <span data-categ="1">Vorspeise</span>
+          <span data-categ="2">Hauptgang </span>
+          <span data-categ="3">Dessert</span>
+          <span data-categ="4">Nachspeise</span>
+        </div>
+      </div>
+
+      <div class="col-md-12 cardsList">
+        <div class="card" data-categ="4">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/R.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><img src="./images/heart.svg" /></a>
+                <h2>Tajine</h2>
+                <p class="card-text">
+                  Die tunesische Tajine kann rein vegetarisch mit Kartoffeln oder Gemüse (z.B. mit Spinat, Erbsen…) oder
+                  je nach Geschmack zusätzlich mit Fleisch (oft Hähnchen) oder Fisch (insbesondere Thunfisch) zubereitet
+                  werden. Manchmal wird der Auflauf zusätzlich noch mit Käse überbacken.
+
+                  Das Gericht ähnelt eher einer italienischen Frittata als den Tajinegerichten, die man aus Marokko
+                  kennt.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Editieren</a>
+                <a href="##" class="card-action-plus">mehr erfahren</a>
+              </div>
+            </div>
+
+            <div class="col-md-12 card-body-description">
+              <h2>Tajine Description</h2>
+              <p>
+                Die Tajine wird in Tunesien in vielen verschiedenen Größen und Formen angeboten. So wird diese nicht nur
+                als Hauptspeise serviert, sondern stellt auch eine beliebte Vorspeise dar.
+              </p>
+            </div>
+          </div>
+        </div>
 
 
+        <div class="card" data-categ="1">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/Shakshuka-768x512.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><img src="./images/heart.svg" /></a>
+                <h2> Shakshuka</h2>
+                <p class="card-text">
+                  Dieses typisch tunesische Essen ist auch im Nahen Osten beliebt, wo es von tunesischen Juden
+                  eingeführt wurde, die nach Israel einwanderten.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Editieren</a>
+                <a href="##" class="card-action-plus">mehr erfahren</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Shakshuka Description</h2>
+              <p>
+                Dieses herzhafte und köstliche Gericht ist ein Eintopf, der aus Tomaten, Zwiebeln, Knoblauch und grünem
+                Paprika zusammen mit einer Vielzahl anderer Zutaten wie Kartoffeln, Zucchini oder sogar Bohnen
+                zubereitet wird, wenn diese im frühen Frühjahr reif sind.
 
-    <script src="script.js"></script>
+                Eier werden oft während des Garvorgangs hinzugefügt, damit sie langsam in der flüssigen Suppe pochiert
+                werden.
+                Dieses einfache Mittag- oder Abendessen wird mit Brot gegessen: Dabei werden Stücke vom Brot abgebrochen
+                und in die Sauce eingetaucht.
+                Hier können sogar verschiedene Versionen probiert werden. Die Zutaten variieren je nach Jahreszeit,
+                fragen Sie einfach, was die Spezialität des Tages ist.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-categ="1">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/Tunesischer-Salat-768x512.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><img src="./images/heart.svg" /></a>
+                <h2> Slata Mechouia</h2>
+                <p class="card-text">
+                  Dieser Salat ist ein weiteres tunesisches Grundnahrungsmittel, das zu fast jeder Mahlzeit als
+                  Vorspeise serviert wird.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Editieren</a>
+                <a href="##" class="card-action-plus">mehr erfahren</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Slata Mechouia Description</h2>
+              <p>
+                Wörtlich übersetzt bedeutet es „gegrillter Salat“ und besteht aus Tomaten und grüner Paprika, die über
+                dem offenen Feuer gebraten und dann fein gehackt und mit Zwiebeln, Knoblauch, gemahlenem Koriander und
+                Kümmel, Zitronensaft und viel Olivenöl gemischt werden.
+
+                Außerdem wird für diesen Salat Harissa verwendet. Passen Sie also auf, denn dieser Salat ist scharf!
+                Kapern, hartgekochte Eier und Thunfisch können diesem Gericht auch hinzugefügt werden.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-categ="3">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/OIP.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><img src="./images/heart.svg" /></a>
+                <h2> Makroudh</h2>
+                <p class="card-text">
+                  Makroudh (Makroud) ist eine Gebäcksorte aus Tunesien und Algerien.
+
+                  Besonders die tunesische Stadt Kairouan ist für die Herstellung von Makroud bekannt.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Editieren</a>
+                <a href="##" class="card-action-plus">mehr erfahren</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Makroudh Description</h2>
+              <p>
+                Makroudh sind eine beliebte Nachspeise in Tunesien und anderen Ländern der nordafrikanischen
+                Mittelmeerküste. Dort wird das Rezept jedoch unterschiedlich abgewandelt, indem der Füllung auch Mandeln
+                hinzugefügt oder das Gebäck auch frittiert werden.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-categ="4">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/Fricassé-768x646.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><img src="./images/heart.svg" /></a>
+                <h2>Fricassé</h2>
+                <p class="card-text">
+                  Dies ist eines der beliebtesten Streetfoods in Tunesien. Es ist ein herzhafter gebratener Donut, der
+                  mit Thunfisch, gekochtem Ei, Oliven, Harissa und gekochten Kartoffeln gefüllt wird.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Editieren</a>
+                <a href="##" class="card-action-plus">mehr erfahren</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Fricassé Description</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                dolor in hendrerit in vulputate velit esse molestie consequat,
+                vel illum dolore eu feugiat nulla facilisis at vero et
+                accumsan et iusto odio dignissim qui blandit praesent luptatum
+                zzril delenit augue duis dolore te feugait nulla facilisi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-categ="2">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/Couscous-768x576.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><img src="./images/heart.svg" /></a>
+                <h2>Tunesische Couscous </h2>
+                <p class="card-text">
+                  Couscous ist das wahrscheinlich bekannteste Gericht aus Nordafrika. Couscous ist ursprünglich ein
+                  Berbergericht und besteht aus einer eintopfartigen Soße aus Gemüse wie Kartoffeln, Tomaten, Zucchini,
+                  Karotten, oder Kürbis und Lamm oder Huhn, das auf einem Bett aus Grieß serviert wird.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Editieren</a>
+                <a href="##" class="card-action-plus">mehr erfahren</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Tunesische Couscous Description</h2>
+              <p>
+                In der Variante der Insel Djerba ist Fisch eine häufige Zutat. Couscous kann sehr vielfältig zubereitet
+                werden, aber in Tunesien enthält dieser Eintopf immer Tomaten und der Grieß wird mit einer Tomatensauce
+                gemischt.
+                Das Le Kef hat eine eigene regionale Küche und der hier zubereitete Couscous ist einzigartig für seine
+                verlockende Kombination aus würzigen und herzhaften Aromen.
+                Bestellen Sie in Dar Boumakhlouf das Bourzguen, ein typisches Lammgericht mit Rosmarin, das auf einem
+                Bett aus gedämpftem Grieß mit Datteln und Nüssen wie Mandeln, Haselnüssen, Walnüssen, Pinienkernen oder
+                Pistazien serviert wird.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-categ="2">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/mloukhia-de-la-cuisine-tunsienne-2.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><img src="./images/heart.svg" /></a>
+                <h2>Molokhiya</h2>
+                <p class="card-text">
+                  Die tunesische Mloukhiya wird aus den getrockneten und pulverisierten Molokheiya Blättern (auf
+                  deutsch: Maltajute oder Muskraut) gemacht, der Eiweißeffekt bleibt dadurch komplett weg.
+
+                  Jedes typische Gericht ist hier in Tunesien ja schon fast Kochabitur-Thema, so rief mein Ansinnen,
+                  tunesische Mloukhiya kochen zu wollen ziemliches Erstaunen und merkliche Bedenken hervor.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Editieren</a>
+                <a href="##" class="card-action-plus">mehr erfahren</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Molokhiya Description</h2>
+
+              <p>
+                Inzwischen ist das Rezept durch vielfaches Erproben perfektioniert.
+                Achtung: am Vorabend beginnen!
+                Man KANN die Mloukhiya in 2 bis 2,5 Std kochen. ABER: mit 7 Stunden schmeckt sie garantiert genial. Ich
+                koche sie abends vier Stunden und am nächsten Vormittag nochmal drei, zusammen mit dem Fleisch. Dann ist
+                soviel Wasser verdampft, dass nur noch ca 1 liter sämige Suppe übrig bleibt.
+
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>Copyright 2023 Amira Dagdoug</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
