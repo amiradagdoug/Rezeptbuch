@@ -1,5 +1,7 @@
 $(".speiseplanFilter span").on("click", function () {
     var currentClick = this.getAttribute("data-categ");
+    $(".speiseplanFilter span").removeClass('active');
+    $(this).addClass('active');
     console.log("Current Click: " + currentClick);
     $(".cardsList .card").each(function (index) {
         if (currentClick == "*") {
