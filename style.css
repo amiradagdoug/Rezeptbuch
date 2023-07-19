@@ -135,9 +135,9 @@ footer {
 
 .card-body-heart:hover {
     font-size: 25px;
-    color: gray;
+    color: gray !important;
 }
 
 .card-body-heart.like {
-    color: green;
+    color: green !important;
 }
