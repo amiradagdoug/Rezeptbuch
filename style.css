@@ -126,3 +126,18 @@ footer {
 .card-body-description {
     display: none;
 }
+
+
+.card-body-heart {
+    font-size: 25px;
+    color: gray;
+}
+
+.card-body-heart:hover {
+    font-size: 25px;
+    color: gray;
+}
+
+.card-body-heart.like {
+    color: green;
+}

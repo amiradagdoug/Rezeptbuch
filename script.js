@@ -19,3 +19,7 @@ $(".speiseplanFilter span").on("click", function () {
 $(".card-action-plus").on("click", function () {
     $(this).parent().parent().parent().find('.card-body-description').slideDown();
 });
+
+$(".card-body-heart").on("click", function () {
+    $(this).toggleClass('like');
+});
