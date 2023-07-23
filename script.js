@@ -23,3 +23,28 @@ $(".card-action-plus").on("click", function () {
 $(".card-body-heart").on("click", function () {
     $(this).toggleClass('like');
 });
+
+
+
+/* Wysiwyg Bootstrap Editor */
+
+tinymce.init({
+    selector: 'textarea#editor',
+});
+
+/* Click on Neue Speise Button */
+$(".btnNewSpeise").on("click", function () {
+    if ($('.formNewSpeise').hasClass('isOpen')) {
+        $('.formNewSpeise').slideUp();
+        $('.formNewSpeise').removeClass('isOpen');
+    } else {
+        $('.formNewSpeise').slideDown();
+        $('.formNewSpeise').addClass('isOpen');
+    }
+});
+
+
+/* Click on Form Speichern  */
+$(".formNewSpeise .btn-primary").on("click", function () {
+
+});

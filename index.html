@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./style.css" />
 
+  <!-- TinyMCE CDN -->
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -55,6 +59,51 @@
   </div>
 
   <div class="container mt-4 mb-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="addSpeise">
+          <button class="btn btnNewSpeise">Neue Speise <i class="glyphicon glyphicon-plus"></i></button>
+        </div>
+        <div class="formNewSpeise">
+          <div class="row justify-content-md-center">
+            <div class="col-md-12">
+              <h3>Bitte eine Neue Speise hinzufugen</h3>
+              <br>
+              <div class="form-group">
+                <label for="speseKateg">Kategorie</label>
+                <select class="form-control speseKateg" id="speseKateg">
+                  <option value="1">Vorspeise</option>
+                  <option value="2">Hauptgang</option>
+                  <option value="3">Dessert</option>
+                  <option value="4">Nachspeise</option>
+                </select>
+              </div>
+
+              <div class="form group">
+                <label>Speise Headline</label>
+                <input class="form-control speiseTitle" type="text" placeholder="Speise Headline">
+              </div>
+              <br>
+              <div class="form-group">
+                <label>Speise Teaser</label>
+                <textarea class="form-control speiseTeaser" placeholder="Speise Teaser" rows="3"></textarea>
+              </div>
+
+              <div class="form group">
+                <label>Speise Image Path</label>
+                <input class="form-control speiseImagePath" type="text" placeholder="Z.B Path: test.jpg">
+              </div>
+              <br>
+              <div class="form-group">
+                <label>Speise Description</label>
+                <textarea id="editor"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary justify-content-md-center">Speichern</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-12">
         <div class="speiseplanFilter">
